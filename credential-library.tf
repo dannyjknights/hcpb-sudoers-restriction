@@ -38,7 +38,7 @@ resource "boundary_credential_library_vault_ssh_certificate" "vault_ssh_cert" {
   path                = "ssh-client-signer/sign/boundary-client"
   //username            = "ec2-user"
   //username = vault_ssh_secret_backend_role.ssh_role.default_user
-  username = "danny"
+  username = "{{.Account.LoginName}}"
 }
 
 //A native Boundary static credential store
