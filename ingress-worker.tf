@@ -31,7 +31,7 @@ locals {
   Group=boundary
   ProtectSystem=full
   ProtectHome=read-only
-  ExecStart=/usr/bin/boundary-worker server -config=/etc/boundary.d/pki-worker.hcl
+  ExecStart=/usr/bin/boundary server -config=/etc/boundary.d/pki-worker.hcl
   ExecReload=/bin/kill --signal HUP $MAINPID
   KillMode=process
   KillSignal=SIGINT
